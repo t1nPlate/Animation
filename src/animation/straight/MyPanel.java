@@ -22,8 +22,8 @@ public class MyPanel extends JPanel {
 
     private void loadImage() {
         try {
-            BufferedImage wPic = ImageIO.read(new File("cat.png"));
-            image = wPic.getScaledInstance(wPic.getWidth() / 3, wPic.getHeight() / 3, Image.SCALE_DEFAULT);
+            BufferedImage wPic = ImageIO.read(new File("plu.png"));
+            image = wPic.getScaledInstance(wPic.getWidth() / 2, wPic.getHeight() / 2, Image.SCALE_DEFAULT);
         } catch (IOException e) {
             e.printStackTrace();
         }
