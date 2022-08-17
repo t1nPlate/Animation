@@ -6,6 +6,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.Objects;
 
 public class Grass {
     protected static final int WIDTH = 800;
@@ -34,8 +35,8 @@ public class Grass {
         frame.add(panel);
         frame.setVisible(true);
 
-        for(int i = 0; i < WIDTH; i++) {
-            for(int j = 0; j < HEIGHT; j++) {
+        for(int i = 0; i < WIDTH/ Objects.requireNonNull(image).getWidth(null); i++) {
+            for(int j = 0; j < HEIGHT/image.getHeight(null); j++) {
                 new GrassTexture(image, 50, i, j);
             }
         }
